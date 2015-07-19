@@ -11,6 +11,8 @@
 		652122D71B5C407100E26052 /* MutuallyExclusive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652122D61B5C407100E26052 /* MutuallyExclusive.swift */; };
 		652122D91B5C427F00E26052 /* MutualExclusiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652122D81B5C427F00E26052 /* MutualExclusiveTests.swift */; };
 		655E43FF1B3F43D60013A3E1 /* TimeoutObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 655E43FE1B3F43D60013A3E1 /* TimeoutObserverTests.swift */; };
+		656010031B5C51D20052EE78 /* LocationPermissionCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656010021B5C51D20052EE78 /* LocationPermissionCondition.swift */; };
+		656010051B5C51F40052EE78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 656010041B5C51F40052EE78 /* CoreLocation.framework */; };
 		657729631B3D9E0E00B5D153 /* Operations.h in Headers */ = {isa = PBXBuildFile; fileRef = 657729621B3D9E0E00B5D153 /* Operations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		657729691B3D9E0E00B5D153 /* Operations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6577295D1B3D9E0E00B5D153 /* Operations.framework */; };
 		657729701B3D9E0E00B5D153 /* OperationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6577296F1B3D9E0E00B5D153 /* OperationsTests.swift */; };
@@ -48,6 +50,8 @@
 		652122D61B5C407100E26052 /* MutuallyExclusive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutuallyExclusive.swift; sourceTree = "<group>"; };
 		652122D81B5C427F00E26052 /* MutualExclusiveTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutualExclusiveTests.swift; sourceTree = "<group>"; };
 		655E43FE1B3F43D60013A3E1 /* TimeoutObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeoutObserverTests.swift; sourceTree = "<group>"; };
+		656010021B5C51D20052EE78 /* LocationPermissionCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationPermissionCondition.swift; sourceTree = "<group>"; };
+		656010041B5C51F40052EE78 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		6577295D1B3D9E0E00B5D153 /* Operations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Operations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		657729611B3D9E0E00B5D153 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		657729621B3D9E0E00B5D153 /* Operations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Operations.h; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				656010051B5C51F40052EE78 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,9 +97,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		656010011B5C51D20052EE78 /* Permissions */ = {
+			isa = PBXGroup;
+			children = (
+				656010021B5C51D20052EE78 /* LocationPermissionCondition.swift */,
+			);
+			path = Permissions;
+			sourceTree = "<group>";
+		};
 		657729531B3D9E0E00B5D153 = {
 			isa = PBXGroup;
 			children = (
+				656010041B5C51F40052EE78 /* CoreLocation.framework */,
 				6577295F1B3D9E0E00B5D153 /* Operations */,
 				6577296C1B3D9E0E00B5D153 /* OperationsTests */,
 				6577295E1B3D9E0E00B5D153 /* Products */,
@@ -158,10 +172,10 @@
 		6577297D1B3DAA0400B5D153 /* Conditions */ = {
 			isa = PBXGroup;
 			children = (
+				652122D61B5C407100E26052 /* MutuallyExclusive.swift */,
 				6577297E1B3DAA0400B5D153 /* OperationCondition.swift */,
 				65D6F58C1B5BFE59003D35AD /* ReachabilityCondition.swift */,
-				652122D51B5C3B4B00E26052 /* Permissions */,
-				652122D61B5C407100E26052 /* MutuallyExclusive.swift */,
+				656010011B5C51D20052EE78 /* Permissions */,
 			);
 			path = Conditions;
 			sourceTree = "<group>";
@@ -321,6 +335,7 @@
 				65CB76FD1B3F284A00791E18 /* OperationObserver.swift in Sources */,
 				65CB76FE1B3F284A00791E18 /* TimeoutObserver.swift in Sources */,
 				65D6F5791B5AE925003D35AD /* GroupOperation.swift in Sources */,
+				656010031B5C51D20052EE78 /* LocationPermissionCondition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
